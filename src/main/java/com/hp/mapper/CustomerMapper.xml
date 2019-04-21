@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hp.mapper.CustomerMapper">
+    <!-- resultMap用于实现映射结果集 -->
+<resultMap id="BaseResultMap" type="com.hp.pojo.Customer">
+    <id column="id" property="id" jdbcType="INTEGER"/>
+    <result column="name" property="name" jdbcType="VARCHAR"/>
+    <result column="telephone" property="telephone" jdbcType="VARCHAR"/>
+    <result column="address" property="asddress" jdbcType="VARCHAR"/>
+    <result column="remark" property="remark" jdbcType="VARCHAR"/>
+</resultMap>
+
+    <!--客户信息保存的方法-->
+    <insert id="create" parameterType="com.hp.pojo.Customer">
+        inset into tb_customer(name,telephone,address,remark)
+        values ()
+    </insert>
+</mapper>
+<!--VCS -->
